@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.thanks {
+}
+
+.thanks__inner {
+  max-width: rem(600);
+}
+
+.thanks__container {
+}
+
+.thanks__main-message,
+.thanks__sub-message {
+  color: $darkgreen;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.125; /* 112.5% */
+}
+
+.thanks__sub-message {
+  margin-top: rem(40);
+  line-height: normal;
+}
+

@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.blog-detail__date {
+  color: $darkgreen;
+  font-family: Gotu;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.286; /* 128.571% */
+}
+
+.blog-detail__title {
+  width: 100%;
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $medium;
+  line-height: normal;
+  padding-bottom: rem(3);
+  border-bottom: rem(1) solid $green;
+
+  @include mq("md"){
+    font-size: rem(32);
+    padding-bottom: 0;
+  }
+}
+
+.blog-detail__image {
+  margin-top: rem(24);
+  width: 100%;
+
+  @include mq("md"){
+    margin-top: rem(40);
+    max-width: rem(700);
+  }
+}
+
+.blog-detail__image img {
+  aspect-ratio: 700 / 468;
+  object-fit: cover;
+  height: auto;
+}
+
+.blog-detail__content {
+  margin-top: rem(24);
+
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__content p {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+}
+
+.blog-detail__content p:not(:first-child) {
+  margin-top: rem(24);
+
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__content figure {
+  margin-top: rem(24);
+  width: 100%;
+
+  @include mq("md"){
+    margin-top: rem(40);
+    max-width: rem(700);
+  }
+}
+
+.blog-detail__content ul {
+  margin-top: rem(24);
+
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__content li:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.blog-detail__content li {
+  position: relative;
+  padding-left: rem(27);
+  display: flex;
+  align-items: start;
+  width: fit-content;
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+}
+
+.blog-detail__content li::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/menu-icon-green.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  flex-shrink: 0;
+}

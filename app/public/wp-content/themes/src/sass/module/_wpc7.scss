@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.wpcf7-list-item {
+  display: block;
+  margin-left: 0;
+}
+
+.wpcf7-list-item:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+/* 入力フィールドのカスタムスタイル */
+.wpcf7-form-control.wpcf7-not-valid {
+  border-color: $red; /* ボーダーの色を赤に変更 */
+  background-color: rgba(201, 72, 0, 0.20); /* 背景色を薄い赤に変更 */
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: $red;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  left: 50%;
+  line-height: normal;
+  position: relative;
+  top: -56px;
+  transform: translateX(-50%);
+}

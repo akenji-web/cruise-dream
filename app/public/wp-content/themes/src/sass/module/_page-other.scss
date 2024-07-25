@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.page-other {
+}
+
+.page-other__inner {
+  width: 100%;
+  max-width: rem(600);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+
+  @include mq("md"){
+    max-width: rem(850);
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.page-other__container {
+  position: relative;
+}
+
+.page-other__title {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $medium;
+  line-height: normal;
+
+  @include mq("md"){
+    font-size: rem(32);
+  }
+}
+
+.page-other__contents {
+  margin-top: rem(40);
+}
+
+.page-other__contents ol {
+  list-style-type: decimal;
+  padding-left: rem(16);
+}
+
+.page-other__contents p,
+.page-other__contents li {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 2.000; /* 200% */
+}

@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.breadcrumb {
+}
+
+.breadcrumb__inner {
+}
+
+.breadcrumb__list {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.breadcrumb__list--white {
+  color: $white;
+}

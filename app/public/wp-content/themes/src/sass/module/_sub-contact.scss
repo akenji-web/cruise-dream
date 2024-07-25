@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.sub-contact {
+}
+
+.sub-contact__inner {
+  width: 100%;
+  max-width: rem(600);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+
+  @include mq("md"){
+    max-width: rem(750);
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.sub-contact__container {
+  position: relative;
+}
+
+// 必須項目の未入力エラー
+
+.contact-error-message {
+  display: none;
+  color: $red;
+  font-family: "Noto Sans JP";
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  position: relative;
+  top: -56px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.sub-contact__form {
+}

@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.return-top {
+  position: fixed;
+  right: rem(10);
+  width: rem(54);
+  height: rem(54);
+  z-index: 10;
+
+  @include mq("md") {
+    width: rem(90);
+    height: rem(90);
+  }
+}
+
+.return-top:hover {
+  @include mq("md") {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.sub-price {
+}
+
+.sub-price__inner {
+  width: 100%;
+  max-width: rem(600);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+
+  @include mq("md"){
+    max-width: rem(752);
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.sub-price__container {
+}
+
+.sub-price__table:not(:first-child) {
+  margin-top: rem(40);
+
+  @include mq("md"){
+    margin-top: rem(80);
+  }
+}

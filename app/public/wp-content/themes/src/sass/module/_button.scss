@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: rem(15) rem(88) rem(15) rem(40);
+  margin-bottom: rem(6);
+  border: 1px solid $green ;
+  background-color: $green;
+  color: $white;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.571; /* 157.143% */
+  z-index: 1;
+  cursor: pointer;
+}
+
+.button::first-letter {
+  text-transform: uppercase;
+}
+
+.button:hover {
+  color: $green;
+}
+
+.button.button--form {
+  padding: 0;
+}
+
+.button.button--reverse {
+  color: $green;
+  border: 1px solid $white;
+  background-color: $white;
+}
+
+.button.button--reverse:hover {
+  color: $white;
+}
+
+// スライドアニメーション
+.button::before {
+  @include mq("md") {
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+  }
+}
+
+.button.button--reverse::before {
+  @include mq("md"){
+    background-color: $green;
+  }
+}
+
+.button:hover:before {
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
+}
+
+// ボタンからずらした枠線
+.button::after {
+  position: absolute;
+  content: '';
+  bottom: rem(-4);
+  right: rem(-4);
+  width: 100%;
+  height: 100%;
+  border: 1px solid $green;
+  z-index: -2;
+}
+
+.button.button--reverse::after {
+  border: 1px solid $white;
+}
+
+.button__input {
+  padding: rem(15) rem(111) rem(15) rem(55);
+  color: $white;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.571; /* 157.143% */
+}
+
+.button:hover .button__input{
+  color: $green;
+}
+
+// ボタンの矢印
+.button__arrow {
+  position: absolute;
+  content: "";
+  background-image: url(../images/arrow-icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  top: rem(22);
+  right: rem(40);
+  width: rem(40);
+  height: rem(7);
+}
+
+.button:hover .button__arrow {
+  @include mq("md") {
+    background-image: url(../images/arrow--green-icon.svg);
+  }
+}
+
+.button.button--reverse > .button__arrow {
+  background-image: url(../images/arrow--green-icon.svg);
+}
+
+.button.button--reverse:hover > .button__arrow {
+  background-image: url(../images/arrow-icon.svg);
+}

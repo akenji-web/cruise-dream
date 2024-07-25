@@ -1,0 +1,129 @@
+@use "global" as *;
+
+.campaign {
+  position: relative;
+
+  @include mq("md") {
+    overflow: hidden; // 横スクロール回避
+  }
+}
+
+.campaign::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: rem(-180);
+  background-color: #eef0f3;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transform: skewX(-25deg);
+  width: rem(300);
+  height: 100%;
+  z-index: -1;
+
+  @include mq("md"){
+    left: rem(-180);
+    transform: skewX(-25deg);
+    width: rem(300);
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.campaign__inner {
+  max-width: rem(600);
+}
+
+.campaign__heading {
+}
+
+.campaign__slide {
+  margin-right: calc(50% - 50vw);
+  margin-top: rem(24);
+  display: flex;
+
+  @include mq("md") {
+    width: 100vw;
+    margin-top: rem(40);
+  }
+}
+
+.campaign__swiper {
+  padding-bottom: rem(10);
+}
+
+.campaign__swiper-wrapper {
+  width: 100%;
+}
+
+.campaign__swiper-slide:hover {
+  @include mq("md") {
+    opacity: 0.7;
+  }
+}
+
+.campaign__navigation {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    content: "";
+    top:  26px;
+    right: calc(50% - min(48vw, 565px));
+    width: rem(240);
+  }
+}
+
+.campaign__swiper-button-prev {
+  left: rem(-25);
+  top: rem(-4);
+}
+
+.campaign__swiper-button-next {
+  right: rem(25);
+  top: rem(-4);
+}
+
+/* 前へ次への矢印カスタマイズ */
+.campaign__swiper-button-prev,
+.campaign__swiper-button-next {
+  @include mq("md") {
+    height: rem(80);
+    width: rem(80);
+  }
+}
+/* 前へ次への矢印カスタマイズ */
+.campaign__swiper-button-prev::after,
+.campaign__swiper-button-next::after {
+  @include mq("md") {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: rem(80);
+    margin: auto;
+    width: rem(80);
+  }
+}
+/* 前への矢印カスタマイズ */
+.campaign__swiper-button-prev::after {
+  @include mq("md") {
+    background-image: url(../images/prev-button.svg);
+  }
+}
+/* 次への矢印カスタマイズ */
+.campaign__swiper-button-next::after {
+  @include mq("md") {
+    background-image: url(../images/next-button.svg);
+  }
+}
+
+.campaign__button {
+  margin-top: rem(29);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(67);
+  }
+}
