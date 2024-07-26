@@ -17,8 +17,8 @@
 
 .tab__button {
   padding: rem(10) rem(16);
-  background-color: $lightgreen;
-  color: $green;
+  background-color: $lightblue;
+  color: $blue;
   font-family: "Noto Sans JP";
   font-size: rem(14);
   font-style: normal;
@@ -38,7 +38,7 @@
 
 .tab__button:hover {
   @include mq("md"){
-    background-color: $green;
+    background-color: $blue;
     color: $white;
   }
 }
@@ -49,7 +49,7 @@
   @include mq("md") {
     display: inline-block;
     content: "";
-    background-color: $green;
+    background-color: $blue;
     mask-image: url(../images/illust-whale.svg);
     mask-size: cover;
     mask-position: center;
@@ -80,7 +80,7 @@
 }
 
 .tab__button.is-active {
-  background-color: $green;
+  background-color: $blue;
   color: $white;
 }
 

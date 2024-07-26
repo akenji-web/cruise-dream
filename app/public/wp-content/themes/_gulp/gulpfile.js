@@ -162,7 +162,7 @@ const browserSyncOption = {
   notify: false,
   // server: "../dist/", // ローカルサーバーのルートディレクトリ
   //WordPressの場合は↓を有効にする。その場合、↑(server)はコメントアウトする。
-  proxy: "codeupsforwordpress.local", // ローカルサーバーのURL（WordPress）
+  proxy: "cruise-dream.local", // ローカルサーバーのURL（WordPress）
 };
 const browserSyncFunc = () => {
   browserSync.init(browserSyncOption);

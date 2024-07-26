@@ -60,12 +60,12 @@
     content: "";
     width: 1px; /*--縦線の太さ(幅)--*/
     height: 100%;
-    background-color: $green; /*--縦線の色--*/
+    background-color: $blue; /*--縦線の色--*/
   }
 }
 
 .contact__logo-area {
-  border-bottom: rem(1) solid $green;
+  border-bottom: rem(1) solid $blue;
   padding-bottom: rem(6);
 }
 
@@ -140,7 +140,7 @@
 .contact__text {
   margin-top: rem(8);
   text-align: center;
-  color: $green;
+  color: $blue;
   font-family: "Noto Sans JP";
   font-size: rem(14);
   font-style: normal;

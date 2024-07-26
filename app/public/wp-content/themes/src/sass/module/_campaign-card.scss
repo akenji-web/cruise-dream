@@ -47,13 +47,13 @@
   padding-bottom: rem(3);
   flex-grow: 1;
   width: 100%;
-  color: $darkgreen;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1.500; /* 150% */
   font-style: normal;
-  border-bottom: rem(1) solid $green;
+  border-bottom: rem(1) solid $blue;
 
   @include mq("md") {
     margin-top: rem(6);
@@ -77,7 +77,7 @@
   margin-top: rem(9);
   margin-right: rem(3);
   text-align: center;
-  color: $darkgreen;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(14);
   font-style: normal;
@@ -178,7 +178,7 @@
 .campaign-card__date {
   margin-top: rem(32);
   text-align: center;
-  color: $green;
+  color: $blue;
   font-family: Lato;
   font-size: rem(16);
   font-style: normal;
@@ -188,7 +188,7 @@
 
 .campaign-card__attention {
   margin-top: rem(7);
-  color: $green;
+  color: $blue;
   text-align: center;
   font-family: "Noto Sans JP";
   font-size: rem(14);

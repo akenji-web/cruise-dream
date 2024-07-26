@@ -53,7 +53,7 @@
   </a>
   <div class="footer__inner inner">
     <div class="footer__heading">
-      <img class="footer__logo" src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_dbl.webp")); ?>" alt="CodeUps">
+      <img class="footer__logo" src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_white.webp")); ?>" alt="CodeUps">
       <div class="footer__sns-icon">
         <a href="https://www.facebook.com/" class="footer__facebook" target="_blank">
           <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/facebooklogo.png")); ?>" alt="facebook">

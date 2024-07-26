@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .blog-detail__date {
-  color: $darkgreen;
+  color: $darkblue;
   font-family: Gotu;
   font-size: rem(14);
   font-style: normal;
@@ -11,14 +11,14 @@
 
 .blog-detail__title {
   width: 100%;
-  color: $darkgreen;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(24);
   font-style: normal;
   font-weight: $medium;
   line-height: normal;
   padding-bottom: rem(3);
-  border-bottom: rem(1) solid $green;
+  border-bottom: rem(1) solid $blue;
 
   @include mq("md"){
     font-size: rem(32);
@@ -51,7 +51,7 @@
 }
 
 .blog-detail__content p {
-  color: $darkgreen;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(16);
   font-style: normal;
@@ -95,7 +95,7 @@
   display: flex;
   align-items: start;
   width: fit-content;
-  color: $darkgreen;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(16);
   font-style: normal;

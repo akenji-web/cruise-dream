@@ -12,8 +12,8 @@
 .price-table__head {
   width: 100%;
   padding: rem(7) rem(7);
-  border: 1px solid $green;
-  background-color: $green;
+  border: 1px solid $blue;
+  background-color: $blue;
   text-align: center;
   color: $white;
   font-family: "Noto Sans JP";
@@ -59,8 +59,8 @@
   max-width: 100%;
   width: rem(240);
   padding: rem(7) rem(7);
-  border: 1px solid $green;
-  color: $darkgreen;
+  border: 1px solid $blue;
+  color: $darkblue;
   text-align: center;
   font-family: "Noto Sans JP";
   font-size: rem(16);
@@ -78,8 +78,8 @@
 .price-table__price {
   width: rem(106);
   padding: rem(16) rem(15);
-  border: 1px solid $green;
-  color: $darkgreen;
+  border: 1px solid $blue;
+  color: $darkblue;
   text-align: right;
   font-family: "Noto Sans JP";
   font-size: rem(16);

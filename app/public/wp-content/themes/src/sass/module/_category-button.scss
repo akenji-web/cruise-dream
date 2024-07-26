@@ -22,13 +22,13 @@
   display: inline-block;
   width: rem(162);
   max-width: 100%;
-  border: 1px solid $green;
+  border: 1px solid $blue;
   padding-top: rem(6);
   padding-bottom: rem(5);
   text-align: center;
   background-color: $white;
   text-transform: uppercase;
-  color: $green;
+  color: $blue;
   font-family: "Noto Sans JP";
   font-size: rem(14);
   font-style: normal;
@@ -42,13 +42,13 @@
 
 .category-button__item a:hover {
   @include mq("md"){
-    background-color: $green;
+    background-color: $blue;
     color: $white;
   }
 }
 
 .category-button__item a.is-active {
-  background-color: $green;
+  background-color: $blue;
   color: $white;
 }
 

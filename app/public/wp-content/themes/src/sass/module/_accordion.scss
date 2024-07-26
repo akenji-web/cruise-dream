@@ -6,8 +6,8 @@
 .accordion__title {
   position: relative;
   padding: rem(14);
-  background-color: $green;
-  border: 1px solid $green;
+  background-color: $blue;
+  border: 1px solid $blue;
   color: $white;
   font-family: "Noto Sans JP";
   font-size: rem(16);
@@ -52,8 +52,8 @@
 .accordion__content {
   display: block;
   padding: rem(22) rem(15);
-  border: 1px solid $green;
-  color: $darkgreen;
+  border: 1px solid $blue;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(16);
   font-style: normal;

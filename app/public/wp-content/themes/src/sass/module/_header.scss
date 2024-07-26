@@ -20,7 +20,7 @@
 }
 
 .header.is-active {
-  background-color: $green; // ドロワーメニュー時のヘッダー背景色
+  background-color: $blue; // ドロワーメニュー時のヘッダー背景色
 }
 
 .header__inner {
@@ -135,7 +135,7 @@
   display: none;
   width: 100%;
   height: calc(100vh - rem(80));
-  background-color: $green;
+  background-color: $blue;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   padding: rem(22) rem(15) 0;

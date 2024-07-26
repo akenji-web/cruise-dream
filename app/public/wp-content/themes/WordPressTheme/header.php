@@ -13,7 +13,7 @@
 	<header class="header js-header">
 		<div class="header__inner">
       <h1 class="header__logo">
-        <a href="<?php echo esc_url(home_url("/")) ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_wh.webp")); ?>" alt="CodeUps"></a>
+        <a href="<?php echo esc_url(home_url("/")) ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_white.webp")); ?>" alt="CodeUps"></a>
       </h1>
       <nav class="header__nav u-desktop">
         <ul class="header__items">

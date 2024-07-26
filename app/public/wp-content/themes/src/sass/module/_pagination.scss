@@ -29,8 +29,8 @@
   justify-content: center;
   width: rem(38);
   height: rem(38);
-  border: 1px solid $green;
-  color: $green;
+  border: 1px solid $blue;
+  color: $blue;
   font-family: Lato;
   font-size: rem(16);
   font-style: normal;
@@ -45,13 +45,13 @@
 .pagination__item a:hover {
   @include mq("md"){
     color: $white;
-    background-color: $green;
+    background-color: $blue;
   }
 }
 
 .pagination__item a.is-active {
   color: $white;
-  background-color: $green;
+  background-color: $blue;
 }
 
 .pagination__prev {
@@ -61,8 +61,8 @@
   content: "";
 	width: rem(10);
 	height: rem(10);
-	border-top: 1px solid $green;
-	border-right: 1px solid $green;
+	border-top: 1px solid $blue;
+	border-right: 1px solid $blue;
 	-webkit-transform: rotate(225deg);
 	transform: rotate(225deg);
   transition: border-top .3s, border-right .3s;
@@ -75,8 +75,8 @@
   content: "";
 	width: rem(10);
 	height: rem(10);
-	border-top: 1px solid $green;
-	border-right: 1px solid $green;
+	border-top: 1px solid $blue;
+	border-right: 1px solid $blue;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
   transition: border-top .3s, border-right .3s;

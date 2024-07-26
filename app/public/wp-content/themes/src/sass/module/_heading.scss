@@ -24,7 +24,7 @@
 }
 
 .heading__title::first-letter {
-  color: $green;
+  color: $blue;
   text-transform: uppercase;
 }
 
@@ -50,7 +50,7 @@
 
 .heading__title.heading__title--reverse::first-letter {
   @include mq("md") {
-    color: $lightgreen;
+    color: $lightblue;
   }
 }
 

@@ -9,7 +9,7 @@
   display: flex;
   gap: rem(8);
   align-items: center;
-  color: $darkgreen;
+  color: $darkblue;
   font-family: "Noto Sans JP";
   font-size: rem(24);
   font-style: normal;
@@ -24,7 +24,7 @@
 .blog-side__heading::before {
   position: absolute;
   content: "";
-  background-color: $green;
+  background-color: $blue;
   width: rem(8);
   height: rem(50);
 }
