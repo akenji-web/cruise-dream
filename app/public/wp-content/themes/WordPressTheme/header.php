@@ -13,7 +13,7 @@
 	<header class="header js-header">
 		<div class="header__inner">
       <h1 class="header__logo">
-        <a href="<?php echo esc_url(home_url("/")) ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_white.webp")); ?>" alt="CodeUps"></a>
+        <a href="<?php echo esc_url(home_url("/")) ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_white.webp")); ?>" alt="会社のロゴ"></a>
       </h1>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
@@ -30,9 +30,9 @@
             </a>
           </li>
           <li class="header__item">
-            <a href="<?php echo esc_url(home_url("/information")) ?>" class="header__link">
-              <p class="header__title">Information</p>
-              <p class="header__subtitle">ダイビング情報</p>
+            <a href="<?php echo esc_url(home_url("/news")) ?>" class="header__link">
+              <p class="header__title">News</p>
+              <p class="header__subtitle">ニュース</p>
             </a>
           </li>
           <li class="header__item">
@@ -45,18 +45,6 @@
             <a href="<?php echo esc_url(home_url("/voice")) ?>" class="header__link">
               <p class="header__title">Voice</p>
               <p class="header__subtitle">お客様の声</p>
-            </a>
-          </li>
-          <li class="header__item">
-            <a href="<?php echo esc_url(home_url("/price")) ?>" class="header__link">
-              <p class="header__title">Price</p>
-              <p class="header__subtitle">料金一覧</p>
-            </a>
-          </li>
-          <li class="header__item">
-            <a href="<?php echo esc_url(home_url("/faq")) ?>" class="header__link">
-              <p class="header__title">FAQ</p>
-              <p class="header__subtitle">よくある質問</p>
             </a>
           </li>
           <li class="header__item">
@@ -77,68 +65,29 @@
       <div class="header__drawer js-drawer">
         <div class="nav">
           <ul class="nav__items">
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="nav__link nav__link--bold">キャンペーン</a>
+            <li class="nav__item">
+              <a href="<?php echo esc_url(home_url("/campaign")) ?>" class="nav__link">キャンペーン</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/campaign-category/license/")) ?>" class="nav__link">ライセンス講習</a>
+              <a href="<?php echo esc_url(home_url("/about")) ?>" class="nav__link">私たちについて</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/campaign-category/trial-diving/")) ?>" class="nav__link">体験ダイビング</a>
+              <a href="<?php echo esc_url(home_url("/news")) ?>" class="nav__link">ニュース</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/campaign-category/fun-diving/")) ?>" class="nav__link">ファンダイビング</a>
-            </li>
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/about")) ?>" class="nav__link nav__link--bold">私たちについて</a>
-            </li>
-          </ul>
-          <ul class="nav__items">
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/information")) ?>" class="nav__link nav__link--bold">ダイビング情報</a>
+              <a href="<?php echo esc_url(home_url("/blog")) ?>" class="nav__link">ブログ</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/information?tab=1")) ?>" class="nav__link">ライセンス講習</a>
+              <a href="<?php echo esc_url(home_url("/voice")) ?>" class="nav__link">お客様の声</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/information?tab=3")) ?>" class="nav__link">体験ダイビング</a>
+              <a href="<?php echo esc_url(home_url("/privacypolicy")) ?>" class="nav__link">プライバシーポリシー</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/information?tab=2")) ?>" class="nav__link">ファンダイビング</a>
-            </li>
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/blog")) ?>" class="nav__link nav__link--bold">ブログ</a>
-            </li>
-          </ul>
-          <ul class="nav__items">
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/voice")) ?>" class="nav__link nav__link--bold">お客様の声</a>
-            </li>
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/price")) ?>" class="nav__link nav__link--bold">料金一覧</a>
+              <a href="<?php echo esc_url(home_url("/termsofservice")) ?>" class="nav__link">利用規約</a>
             </li>
             <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/price#license")) ?>" class="nav__link">ライセンス講習</a>
-            </li>
-            <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/price#trial-diving")) ?>" class="nav__link">体験ダイビング</a>
-            </li>
-            <li class="nav__item">
-              <a href="<?php echo esc_url(home_url("/price#fun-diving")) ?>" class="nav__link">ファンダイビング</a>
-            </li>
-          </ul>
-          <ul class="nav__items">
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/faq")) ?>" class="nav__link nav__link--bold">よくある質問</a>
-            </li>
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/privacypolicy")) ?>" class="nav__link nav__link--bold">プライバシー<br class="u-mobile">ポリシー</a>
-            </li>
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/termsofservice")) ?>" class="nav__link nav__link--bold">利用規約</a>
-            </li>
-            <li class="nav__item nav__item--bold">
-              <a href="<?php echo esc_url(home_url("/contact")) ?>" class="nav__link nav__link--bold">お問い合わせ</a>
+              <a href="<?php echo esc_url(home_url("/contact")) ?>" class="nav__link">お問い合わせ</a>
             </li>
           </ul>
         </div>

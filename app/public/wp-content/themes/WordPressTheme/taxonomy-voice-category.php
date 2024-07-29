@@ -4,7 +4,7 @@
   <div class="mv">
     <picture>
       <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page-voice-fv-sp.jpg")); ?>" media="(max-width: 767px)">
-      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-voice-fv.jpg")); ?>" alt="キャンペーンのメイン画像">
+      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-voice-fv.jpg")); ?>" alt="">
     </picture>
     <h1 class="mv__text">voice</h1>
   </div>
@@ -13,7 +13,7 @@
   <?php get_template_part('parts/breadcrumb'); ?>
 
   <div class="sub-voice sub-top-main sub-top-main--wide">
-    <div class="sub-voice__inner inner back-icon">
+    <div class="sub-voice__inner inner ">
       <!-- カテゴリーボタン -->
       <ul class="sub-voice__category-button category-button">
         <?php
@@ -44,10 +44,9 @@
               $term_class = ($current_term_id === $term->term_id) ? 'is-active' : '';
               $term_link = sprintf(
                 // 各タームに付与するクラスを指定できる
-                '<li class="category-button__item"><a class="tab__link %s" href="%s" alt="%s">%s</a></li>',
+                '<li class="category-button__item"><a class="tab__link %s" href="%s">%s</a></li>',
                 $term_class,
                 esc_url(get_term_link($term->term_id)),
-                esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $term->name)),
                 esc_html($term->name)
               );
               echo sprintf(esc_html__('%s', 'textdomain'), $term_link);

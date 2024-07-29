@@ -2,19 +2,42 @@
 
 .return-top {
   position: fixed;
-  right: rem(10);
-  width: rem(54);
-  height: rem(54);
-  z-index: 10;
+  right: rem(24);
+  width: rem(64);
+  height: rem(64);
+  z-index: 20;
+  background-color: $blue;
+  border-radius: 50%;
 
   @include mq("md") {
-    width: rem(90);
-    height: rem(90);
+    right: rem(48);
+    width: rem(64);
+    height: rem(64);
   }
 }
 
 .return-top:hover {
   @include mq("md") {
     opacity: 0.7;
+  }
+}
+
+.return-top__arrow {
+  position: absolute;
+  content: '';
+  mask-image: url(../images/arrow-up-icon.svg);
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: $white;
+  width: rem(35);
+  height: rem(30);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq("md"){
+    width: rem(35);
+    height: rem(30);
   }
 }

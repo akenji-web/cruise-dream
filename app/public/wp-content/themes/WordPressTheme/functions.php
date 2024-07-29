@@ -27,6 +27,7 @@ function my_script_init()
     wp_enqueue_style( 'NotoSerifJP', '//fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap' );
     wp_enqueue_script('swiper', '//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', "", "1.0.1");
     wp_enqueue_script('inview-js', get_template_directory_uri() . '/assets/js/jquery.inview.min.js', array('jquery'), '1.0.1', true);
+    wp_enqueue_script('wave-js', get_template_directory_uri() . '/assets/js/wave.js', array('jquery'), '1.0.1', true);
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0.1', true);
     wp_enqueue_style('swiper-css', '//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '1.0.1');
     wp_enqueue_style('style-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.1');
@@ -140,13 +141,27 @@ function custom_posts_per_page_campaign($query)
         // カスタム投稿のスラッグを記述
         if (is_post_type_archive('campaign')) {
             // 表示件数を指定
-            $query->set('posts_per_page', 4);
+            $query->set('posts_per_page', 6);
         } elseif (is_tax('campaign-category')) {
-            $query->set('posts_per_page', 4);
+            $query->set('posts_per_page', 6);
         }
     }
 }
 add_action('pre_get_posts', 'custom_posts_per_page_campaign');
+
+function custom_posts_per_page_news($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        // カスタム投稿のスラッグを記述
+        if (is_post_type_archive('news')) {
+            // 表示件数を指定
+            $query->set('posts_per_page', 6);
+        } elseif (is_tax('news-category')) {
+            $query->set('posts_per_page', 6);
+        }
+    }
+}
+add_action('pre_get_posts', 'custom_posts_per_page_news');
 
 
 

@@ -47,30 +47,79 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
-  // Campaignのスライダー
-  const campaignswiper = new Swiper(".js-campaign-swiper", {
+  // blogのスライダー
+  const blogswiper = new Swiper(".js-blog-swiper", {
     loop: true, //繰り返しをする
     loopedSlides: 4,
+    // slidesPerView: 1.2, //一度に表示するスライド枚数
+    centeredSlides: true,
+    centeredSlidesBounds: true, //アクティブなスライドを中央に配置
     speed: 500,
     spaceBetween: 24, //スライド間の距離を24px
-    width: 280,
     effect: "slide",
     autoplay: {
-      delay: 4000,
+      delay: 10000,
       waitForTransition: false
     },
     navigation: {
       prevEl: '.swiper-button-next',
       nextEl: '.swiper-button-prev'
     },
-    // when window width is >= 768px
     breakpoints: {
+      // when window width is >= 450px
+      450: {
+        slidesPerView: 1.5, //一度に表示するスライド枚数
+      },
+      // when window width is >= 600px
+      600: {
+        slidesPerView: 1.8, //一度に表示するスライド枚数
+      },
+      // when window width is >= 760px
       768: {
+        slidesPerView: 3, //一度に表示するスライド枚数
         spaceBetween: 40, //スライド間の距離を40px
-        width: 333
-      }
+      },
     }
   });
+
+
+  // フェードインアニメーション
+  function delayScrollAnime() {
+    var time = 0.3;//遅延時間を増やす秒数の値
+    var value = time;
+    $('.delayScroll').each(function () {
+      var parent = this;					//親要素を取得
+      var elemPos = $(this).offset().top;//要素の位置まで来たら
+      var scroll = $(window).scrollTop();//スクロール値を取得
+      var windowHeight = $(window).height();//画面の高さを取得
+      var childs = $(this).children();	//子要素を取得
+
+      if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {//指定領域内にスクロールが入ったらまた親要素にクラスplayがなければ
+        $(childs).each(function () {
+          if (!$(this).hasClass("js-fade__up")) {//アニメーションのクラス名が指定されているかどうかをチェック
+            $(parent).addClass("play");	//親要素にクラス名playを追加
+            $(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
+            $(this).addClass("js-fade__up");//アニメーションのクラス名を追加
+            value = value + time;//delay時間を増加させる
+
+            //全ての処理を終わったらplayを外す
+            var index = $(childs).index(this);
+            if((childs.length-1) == index){
+              $(parent).removeClass("play");
+            }
+          }
+        })
+      }else {
+        $(childs).removeClass("js-fade__up");//アニメーションのクラス名を削除
+        value = time;//delay初期値の数値に戻す
+      }
+    })
+  }
+
+  // 画面をスクロールをしたら動かしたい場合の記述
+    $(window).scroll(function (){
+      delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+    });// ここまで画面をスクロールをしたら動かしたい場合の記述
 
 
   // 画像表示のアニメーション
@@ -136,7 +185,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       } else {
         returnTop.css({
           position: "fixed",
-          bottom: "10px",
+          bottom: "50px",
         });
       }
     });
@@ -185,11 +234,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // アーカイブの矢印トグル
   $(function () {
-    $(".js-side-archive__item:first-child .js-side-archive__month-list").css(
-      "display",
-      "block"
-    );
-    $(".js-side-archive__item:first-child .js-side-archive__year").addClass("is-open");
+    // リロード時先頭だけ開く
+    // $(".js-side-archive__item:first-child .js-side-archive__month-list").css(
+    //   "display",
+    //   "block"
+    // );
+    // $(".js-side-archive__item:first-child .js-side-archive__year").addClass("is-open");
     $(".js-side-archive__year").on("click", function () {
       $(this).toggleClass("is-open");
       $(this).next().slideToggle(300);
@@ -198,8 +248,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // faqのアコーディオン
   $(function () {
+    $(".js-accordion:first-child .accordion__title").addClass("is-open");
+    $(".js-accordion:first-child .accordion__content").css(
+      "display",
+      "block"
+    );
     $(".js-accordion-title").on("click", function () {
-      $(this).toggleClass("is-close");
+      $(this).toggleClass("is-open");
       $(this).next().slideToggle(300);
     });
   });

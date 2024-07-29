@@ -3,8 +3,8 @@
   <!-- メインビュー -->
   <div class="mv">
     <picture>
-      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page-campaign-fv-sp.jpg")); ?>" media="(max-width: 767px)">
-      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-campaign-fv.jpg")); ?>" alt="キャンペーンのメイン画像">
+      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page_campaign-sp.webp")); ?>" media="(max-width: 767px)">
+      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page_campaign-pc.webp")); ?>" alt="">
     </picture>
     <h1 class="mv__text">campaign</h1>
   </div>
@@ -14,7 +14,7 @@
 
   <!-- キャンペーンコンテンツ -->
   <div class="archive-campaign sub-top-main">
-    <div class="archive-campaign__inner inner back-icon">
+    <div class="archive-campaign__inner inner">
       <!-- カテゴリーボタン -->
       <ul class="archive-campaign__category-button category-button">
         <?php
@@ -42,9 +42,8 @@
             foreach ($terms as $term) {
               $term_link = sprintf(
                 // 各タームに付与するクラスを指定できる
-                '<li class="category-button__item"><a class="tab__link" href="%s" alt="%s">%s</a></li>',
+                '<li class="category-button__item"><a class="tab__link" href="%s">%s</a></li>',
                 esc_url(get_term_link($term->term_id)),
-                esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $term->name)),
                 esc_html($term->name)
               );
               echo sprintf(esc_html__('%s', 'textdomain'), $term_link);
@@ -56,12 +55,14 @@
       <div class="archive-campaign__cards archive-campaign-cards">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-            <div class="archive-campaign-cards__item campaign-card">
-              <?php if (has_post_thumbnail()) : ?>
-                <img class="campaign-card__image" src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" decoding="async">
-              <?php else : ?>
-                <img class="campaign-card__image" src="<?php echo esc_url(get_theme_file_uri( "/assets/images/noimage.jpg" )); ?>)" alt="NoImage画像" loading="lazy" decoding="async" />
-              <?php endif ; ?>
+            <a href="<?php the_permalink(); ?>" class="archive-campaign-cards__item campaign-card">
+              <figure class="campaign-card__image">
+                <?php if (has_post_thumbnail()) : ?>
+                  <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" decoding="async">
+                <?php else : ?>
+                  <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/noimage.jpg" )); ?>)" alt="NoImage画像" loading="lazy" decoding="async" />
+                <?php endif ; ?>
+              </figure>
               <div class="campaign-card__body campaign-card__body--large">
                 <?php
                   $taxonomy_terms = get_the_terms($post->ID, 'campaign-category');
@@ -85,16 +86,13 @@
                   <div class="campaign-card__main-text text"><?php the_content(); ?></div>
                   <p class="campaign-card__date">
                     <?php if (get_field("custom-campaign-open-date") && get_field("custom-campaign-close-date")) : ?>
+                    <span>キャンペーン期間</span>
                     <time datetime="<?php echo formatted_date(get_field("custom-campaign-open-date")) ?>" itemprop="startDate"><?php echo get_field("custom-campaign-open-date"); ?></time>-<time datetime="<?php echo formatted_date(get_field("custom-campaign-close-date")) ?>" itemprop="endDate"><?php echo get_field("custom-campaign-close-date"); ?></time>
                     <?php endif; ?>
                   </p>
-                  <p class="campaign-card__attention">ご予約・お問い合わせはコチラ</p>
-                  <div class="campaign-card__button">
-                    <a href="<?php echo esc_url(home_url("/contact")) ?>" class="button">contact us<span class="button__arrow"></span></a>
-                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           <?php endwhile; ?>
         <?php else : ?>
           <p>記事が投稿されていません</p>

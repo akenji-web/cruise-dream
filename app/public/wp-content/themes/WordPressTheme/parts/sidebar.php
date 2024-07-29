@@ -38,41 +38,6 @@
     </ul>
   </div>
 
-  <!-- 口コミ -->
-  <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>口コミ</h2>
-  <div class="blog-side__contents">
-    <?php
-      $args = [
-        "post_type" => "voice",
-        "orderby" => "date",
-        "order" => "DESC",
-        "posts_per_page" => 1,
-      ];
-      $the_query = new WP_Query($args);
-    ?>
-    <?php if ($the_query->have_posts()) : ?>
-      <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <div class="review-card">
-          <figure class="review-card__image">
-            <?php if (has_post_thumbnail()) : ?>
-              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" decoding="async">
-            <?php else : ?>
-              <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/noimage.jpg" )); ?>)" alt="NoImage画像" loading="lazy" decoding="async">
-            <?php endif ; ?>
-          </figure>
-          <p class="review__age"><?php the_field("custom-voice-age"); ?></p>
-          <p class="review__title"><?php the_title(); ?></p>
-        </div>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-    <?php else : ?>
-      <p>記事が投稿されていません</p>
-    <?php endif; ?>
-    <div class="blog-side__button">
-      <a href="<?php echo esc_url(home_url("/voice")) ?>" class="button">view more<span class="button__arrow"></span></a>
-    </div>
-  </div>
-
   <!-- キャンペーン -->
   <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>キャンペーン</h2>
   <div class="blog-side__contents">
@@ -81,18 +46,20 @@
         "post_type" => "campaign",
         "orderby" => "date",
         "order" => "DESC",
-        "posts_per_page" => 2,
+        "posts_per_page" => 1,
       ];
       $the_query = new WP_Query($args);
     ?>
     <?php if ($the_query->have_posts()) : ?>
       <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
       <div class="blog-side__campaign campaign-card">
-        <?php if (has_post_thumbnail()) : ?>
-          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" class="campaign-card__image campaign-card__image--small" loading="lazy" decoding="async">
-        <?php else : ?>
-          <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/noimage.jpg" )); ?>)" alt="NoImage画像" class="campaign-card__image campaign-card__image--small" loading="lazy" decoding="async">
-        <?php endif ; ?>
+        <figure class="campaign-card__image campaign-card__image--small">
+          <?php if (has_post_thumbnail()) : ?>
+            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" decoding="async">
+          <?php else : ?>
+            <img src="<?php echo esc_url(get_theme_file_uri( "/assets/images/noimage.jpg" )); ?>)" alt="NoImage画像" loading="lazy" decoding="async">
+          <?php endif ; ?>
+        </figure>
         <div class="campaign-card__body campaign-card__body--small">
           <p class="campaign-card__title campaign-card__title--center"><?php the_title(); ?></p>
           <p class="campaign-card__text campaign-card__text--small">全部コミコミ(お一人様)</p>

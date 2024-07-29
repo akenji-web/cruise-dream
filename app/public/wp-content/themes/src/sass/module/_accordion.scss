@@ -5,7 +5,7 @@
 
 .accordion__title {
   position: relative;
-  padding: rem(14);
+  padding: rem(14) rem(48) rem(14) rem(14);
   background-color: $blue;
   border: 1px solid $blue;
   color: $white;
@@ -41,16 +41,17 @@
 }
 
 .accordion__title::after {
-  opacity: 0;
-}
-
-.accordion__title.is-close::after {
   transform: rotate(90deg);
   opacity: 1;
 }
 
+.accordion__title.is-open::after {
+  transform: rotate(0deg);
+  opacity: 0;
+}
+
 .accordion__content {
-  display: block;
+  display: none;
   padding: rem(22) rem(15);
   border: 1px solid $blue;
   color: $darkblue;

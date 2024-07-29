@@ -1,2 +1,107 @@
 [25-Jul-2024 04:42:32 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\class-wp-customize-widgets.php on line 905
 [25-Jul-2024 04:48:40 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[27-Jul-2024 06:53:23 UTC] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\functions.php:104
+Stack trace:
+#0 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\functions.php(104): number_format('')
+#1 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php(67): formatted_price('')
+#2 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\akenj\\...')
+#3 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-blog-header.php(19): require_once('C:\\Users\\akenj\\...')
+#4 C:\Users\akenj\Local Sites\cruise-dream\app\public\index.php(17): require('C:\\Users\\akenj\\...')
+#5 {main}
+  thrown in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\functions.php on line 104
+[27-Jul-2024 09:02:20 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:02:20 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:09:35 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 63
+[27-Jul-2024 09:09:35 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 63
+[27-Jul-2024 09:09:44 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 63
+[27-Jul-2024 09:09:44 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 63
+[27-Jul-2024 09:10:07 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 63
+[27-Jul-2024 09:10:07 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 63
+[27-Jul-2024 09:12:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function get_term(), 0 passed in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 61 and at least 1 expected in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\taxonomy.php:977
+Stack trace:
+#0 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php(61): get_term()
+#1 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\akenj\\...')
+#2 C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-blog-header.php(19): require_once('C:\\Users\\akenj\\...')
+#3 C:\Users\akenj\Local Sites\cruise-dream\app\public\index.php(17): require('C:\\Users\\akenj\\...')
+#4 {main}
+  thrown in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\taxonomy.php on line 977
+[27-Jul-2024 09:13:18 UTC] PHP Fatal error:  Cannot use [] for reading in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:13:24 UTC] PHP Warning:  Undefined array key "slug" in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:14:12 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:14:12 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:14:20 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:14:28 UTC] PHP Fatal error:  Cannot use [] for reading in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:23 UTC] PHP Warning:  Attempt to read property "" on array in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:40 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:40 UTC] PHP Warning:  Attempt to read property "" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:43 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:43 UTC] PHP Warning:  Attempt to read property "" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:54 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:15:54 UTC] PHP Warning:  Attempt to read property "name" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:16:41 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:16:41 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 09:16:50 UTC] PHP Warning:  Undefined array key "name" in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 62
+[27-Jul-2024 10:14:42 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:14:42 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:14:42 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:14:42 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:14:42 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:14:42 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:01 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:01 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:01 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:01 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:01 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:01 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 64
+[27-Jul-2024 10:15:21 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 71
+[27-Jul-2024 10:15:21 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 71
+[27-Jul-2024 10:15:21 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 71
+[27-Jul-2024 10:23:14 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 106
+[27-Jul-2024 10:23:53 UTC] PHP Parse error:  syntax error, unexpected token "endwhile", expecting "elseif" or "else" or "endif" in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 73
+[27-Jul-2024 10:28:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\index.php on line 10
+[27-Jul-2024 10:29:02 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 73
+[27-Jul-2024 10:29:02 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 73
+[27-Jul-2024 10:29:02 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 73
+[27-Jul-2024 10:32:32 UTC] PHP Warning:  Undefined array key 3 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\class-wp-query.php on line 3671
+[27-Jul-2024 10:38:04 UTC] PHP Warning:  Undefined array key 3 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\class-wp-query.php on line 3671
+[27-Jul-2024 10:38:19 UTC] PHP Warning:  Undefined array key 3 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-includes\class-wp-query.php on line 3671
+[27-Jul-2024 11:59:46 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 65
+[27-Jul-2024 11:59:46 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 65
+[27-Jul-2024 11:59:46 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\archive-news.php on line 65
+[27-Jul-2024 12:37:32 UTC] PHP Warning:  Undefined variable $current_term_id in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\taxonomy-news-category.php on line 46
+[27-Jul-2024 12:37:32 UTC] PHP Warning:  Undefined variable $current_term_id in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\taxonomy-news-category.php on line 46
+[27-Jul-2024 17:34:40 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-news.php on line 26
+[27-Jul-2024 17:35:43 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-news.php on line 25
+[27-Jul-2024 17:35:43 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-news.php on line 25
+[27-Jul-2024 18:43:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 118
+[27-Jul-2024 18:43:26 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 118
+[27-Jul-2024 18:43:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 118
+[27-Jul-2024 18:43:26 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 118
+[27-Jul-2024 18:43:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 118
+[27-Jul-2024 18:43:26 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 118
+[27-Jul-2024 18:44:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 119
+[27-Jul-2024 18:44:03 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 119
+[27-Jul-2024 18:44:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 119
+[27-Jul-2024 18:44:03 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 119
+[27-Jul-2024 18:44:03 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 119
+[27-Jul-2024 18:44:03 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 119
+[27-Jul-2024 18:45:14 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 115
+[27-Jul-2024 18:45:14 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 115
+[27-Jul-2024 18:45:14 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 115
+[27-Jul-2024 18:45:14 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 115
+[27-Jul-2024 18:45:14 UTC] PHP Warning:  Undefined array key 0 in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 115
+[27-Jul-2024 18:45:14 UTC] PHP Warning:  Attempt to read property "category_nicename" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\front-page.php on line 115
+[28-Jul-2024 08:07:12 UTC] フックの cron 予約解除イベントエラー: sm_ping、エラーコード: could_not_set、エラーメッセージ: Cron イベントのリストを保存できません。、データ: {"schedule":false,"args":[]}
+[29-Jul-2024 01:07:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 25
+[29-Jul-2024 01:07:36 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 25
+[29-Jul-2024 02:25:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 25
+[29-Jul-2024 02:25:28 UTC] PHP Warning:  Attempt to read property "slug" on null in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 25
+[29-Jul-2024 02:26:07 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:26:52 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:27:27 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:27:33 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:27:42 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:28:11 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:28:33 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:29:05 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 26
+[29-Jul-2024 02:29:24 UTC] PHP Warning:  Undefined variable $slug in C:\Users\akenj\Local Sites\cruise-dream\app\public\wp-content\themes\WordPressTheme\single-campaign.php on line 25

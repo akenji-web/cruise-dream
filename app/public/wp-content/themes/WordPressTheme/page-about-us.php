@@ -3,8 +3,8 @@
   <!-- メインビュー -->
   <div class="mv">
     <picture>
-      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page-aboutus-fv-sp.jpg")); ?>" media="(max-width: 767px)">
-      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-aboutus-fv.jpg")); ?>" alt="私たちについてのメイン画像">
+      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page_about-sp.webp")); ?>" media="(max-width: 767px)">
+      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page_about-pc.webp")); ?>" alt="">
     </picture>
     <h1 class="mv__text">about us</h1>
   </div>
@@ -12,24 +12,55 @@
   <!-- パンくず -->
   <?php get_template_part('parts/breadcrumb'); ?>
 
-  <!-- Dive into the Ocean -->
-  <div class="sub-about-us sub-top-main">
-    <div class="sub-about-us__inner inner back-icon">
-      <div class="sub-about-us__container">
-        <div class="sub-about-us__left-image u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/about1.jpg")); ?>" alt="シーサーの画像">
-        </div>
-        <div class="sub-about-us__right-image">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/about2.jpg")); ?>" alt="二匹の黄色の魚の画像">
-        </div>
-        <p class="sub-about-us__phrase">Dive into<br>the Ocean</p>
-        <p class="sub-about-us__text text text--reverse">
-          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-        </p>
+  <!-- プロフィール -->
+  <section class="profile sub-top-main">
+    <div class="profile__inner inner">
+      <div class="profile__heading heading">
+        <h2 class="heading__title">company profile</h2>
+        <p class="heading__sub-title">会社概要</p>
+      </div>
+      <div class="profile__container">
+        <picture>
+          <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/about_profile-pc.webp")); ?>" media="(min-width: 768px)" />
+          <img class="profile__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/about_profile-sp.webp")); ?>" alt="青空の下会社のビルが建っている様子" loading="lazy" decoding="async">
+        </picture>
+        <dl class="profile__list">
+          <div class="profile__item">
+            <dt class="profile__title">運営会社</dt>
+            <dd class="profile__content">株式会社CRUISE DREAM</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">商号</dt>
+            <dd class="profile__content">CRUISE DREAM</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">代表者</dt>
+            <dd class="profile__content">秋山　けんじ</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">所在地</dt>
+            <dd class="profile__content">〒000-0000　<br class="u-mobile">東京都港区青山0-00-00</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">電話番号</dt>
+            <dd class="profile__content">000-0000-0000</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">資本金</dt>
+            <dd class="profile__content">3000万円</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">従業員数</dt>
+            <dd class="profile__content">200名</dd>
+          </div>
+          <div class="profile__item">
+            <dt class="profile__title">業務内容</dt>
+            <dd class="profile__content">国内・海外クルーズを中心とした旅行業</dd>
+          </div>
+        </dl>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ギャラリー -->
   <section class="gallery sub-about-us-gallery">

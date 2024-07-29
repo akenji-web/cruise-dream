@@ -9,22 +9,6 @@
   max-width: rem(600);
 }
 
-.gallery__inner::before {
-  @include mq("md") {
-    position: absolute;
-    content: "";
-    top: -80px;
-    right: calc(50% - min(48vw, 640px));
-    background-image: url(../images/illust-fish3.png);
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: rem(301);
-    height: rem(138);
-    z-index: -1;
-  }
-}
-
 .gallery__heading {
 
 }

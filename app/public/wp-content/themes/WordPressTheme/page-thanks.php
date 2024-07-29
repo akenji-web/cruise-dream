@@ -3,8 +3,8 @@
   <!-- メインビュー -->
   <div class="mv">
     <picture>
-      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page-contact-fv-sp.jpg")); ?>" media="(max-width: 767px)">
-      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-contact-fv.jpg")); ?>" alt="お問い合わせのメイン画像">
+      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page_contact-sp.webp")); ?>" media="(max-width: 767px)">
+      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page_contact-pc.webp")); ?>" alt="">
     </picture>
     <h1 class="mv__text">contact</h1>
   </div>
@@ -14,7 +14,7 @@
 
   <!-- サンクス -->
   <div class="thanks sub-top-main">
-    <div class="thanks__inner inner back-icon">
+    <div class="thanks__inner inner ">
       <div class="thanks__container">
         <p class="thanks__main-message">お問い合わせ内容を送信完了しました。</p>
         <p class="thanks__sub-message">このたびは、お問い合わせ頂き誠にありがとうございます。<br>

@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.news {
+  position: relative;
+  padding-top: rem(48);
+  padding-bottom: rem(120);
+  background-color: $lightblue;
+  
+  @include mq("md"){
+    padding-bottom: rem(52);
+  }
+}
+
+.news__inner {
+  max-width: rem(355);
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include mq("sm"){
+    max-width: rem(600);
+  }
+}
+
+.news__heading {
+
+}
+
+.news__button {
+  position: absolute;
+  bottom: rem(16);
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+
+  @include mq("md"){
+    top: rem(80);
+    bottom: auto;
+    left: auto;
+    right: calc(50% - min(43vw, rem(540)));
+  }
+}
+
+.news__container {
+  margin-top: rem(30);
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid $black;
+
+  @include mq("md"){
+    margin-top: rem(40);
+    grid-template-columns: repeat(3, 1fr);
+    border-top: none;
+    border-left: 1px solid $black;
+  }
+}
+
+.news__article {
+  display: inline-block;
+  padding: rem(21) 0;
+  transition: opacity 0.3s;
+  border-bottom: 1px solid $black;
+
+  @include mq("md"){
+    padding: rem(14) rem(20) rem(19);
+    border-right: 1px solid $black;
+    border-bottom: none;
+  }
+}
+
+.news__article:hover {
+  opacity: 0.7;
+}
+
+.news__datetime {
+  color: $black;
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: calc(22 / 14);
+  letter-spacing: .1em;
+}
+
+.news__title {
+  margin-top: rem(9);
+  color: $black;
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: calc(27 / 18);
+  letter-spacing: .1em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.news__category {
+  margin-top: rem(13);
+  color: $black;
+  font-size: rem(14);
+  font-family: 'Marcellus';
+  font-weight: $regular;
+  line-height: calc(18 / 14);
+  letter-spacing: .1em;
+}
+

@@ -12,8 +12,8 @@
   <!-- メインビュー -->
   <div class="mv">
   <picture>
-      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page-other-fv-sp.jpg")); ?>" media="(max-width: 767px)">
-      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-other-fv.jpg")); ?>" alt="その他のページのメイン画像">
+      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page_other-sp.webp")); ?>" media="(max-width: 767px)">
+      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page_other-pc.webp")); ?>" alt="">
     </picture>
     <h1 class="mv__text"><?php echo $title; ?></h1>
   </div>
@@ -23,7 +23,7 @@
 
   <!-- その他のページコンテンツ -->
   <div class="page-other sub-top-main">
-    <div class="page-other__inner back-icon">
+    <div class="page-other__inner ">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
         <div class="page-other__container">

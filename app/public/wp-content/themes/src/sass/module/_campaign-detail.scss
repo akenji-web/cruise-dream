@@ -1,0 +1,132 @@
+@use "global" as *;
+
+.campaign-detail {
+}
+
+.campaign-detail__heading {
+
+}
+
+.campaign-detail__title {
+  color: $black;
+  font-size: rem(24);
+  font-family: "Noto Sans JP";
+  font-weight: $medium;
+  line-height: normal;
+  letter-spacing: .1em;
+  padding-bottom: rem(3);
+  border-bottom: rem(1) solid $blue;
+
+  @include mq("md"){
+    font-size: rem(32);
+  }
+}
+
+.campaign-detail__category,
+.campaign-detail__date {
+  color: $black;
+  font-size: rem(14);
+  font-family: 'Marcellus';
+  font-weight: $regular;
+  line-height: calc(18 / 14);
+  letter-spacing: .1em;
+
+  @include mq("md"){
+    font-size: rem(12);
+    line-height: calc(15 / 12);
+  }
+}
+
+.campaign-detail__category {
+  display: inline-block;
+}
+
+.campaign-detail__date {
+  margin-left: rem(12);
+
+  @include mq("md"){
+    margin-left: rem(8);
+  }
+}
+
+.campaign-detail__image {
+  margin-top: rem(32);
+
+  @include mq("md"){
+    margin-top: rem(16);
+  }
+}
+
+.campaign-detail__image img {
+  width: 100%;
+  aspect-ratio: 720 / 400;
+  object-fit: cover;
+  height: auto;
+
+  @include mq("md"){
+    max-width: rem(800);
+    aspect-ratio: 800 / 440;
+  }
+}
+
+.campaign-detail__main-text {
+  margin-top: rem(26);
+
+  @include mq("md"){
+    margin-top: rem(35);
+  }
+}
+
+.campaign-detail__body {
+  margin-top: rem(24);
+
+  @include mq("md"){
+    margin-top: rem(20);
+  }
+}
+
+.campaign-detail__content {
+  color: $black;
+  font-size: rem(16);
+  font-family: "Noto Sans JP";
+  font-weight: $normal;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.campaign-detail__content h2 {
+  margin-top: rem(32);
+  font-family: 'Yu Gothic','YuGothic','sans-serif';
+
+  @include mq("md"){
+    margin-top: rem(48);
+  }
+}
+
+.campaign-detail__content h3 {
+  margin-top: rem(16);
+  font-family: 'Yu Gothic','YuGothic','sans-serif';
+
+  @include mq("md"){
+    margin-top: rem(24);
+  }
+}
+
+.campaign-detail__content p,
+.campaign-detail__content ul {
+  margin-top: rem(8);
+
+  @include mq("md"){
+    margin-top: rem(12);
+  }
+}
+
+.campaign-detail__button {
+  margin-top: rem(28);
+  text-align: center;
+
+  @include mq("md"){
+    margin-top: rem(32);
+  }
+}
+

@@ -9,8 +9,8 @@
 .wp-pagenavi a,
 .wp-pagenavi span.current {
 	align-items: center;
-	border: 1px solid #408F95;
-	color: #408F95;
+	border: 1px solid $blue;
+	color: $blue;
 	display: inline-flex;
 	font-family: Lato;
 	font-size: 1rem;
@@ -24,8 +24,8 @@
 
 .wp-pagenavi a:hover,
 .wp-pagenavi span.current {
-	background-color: #408F95;
-	color: #fff;
+	background-color: $blue;
+	color: $white;
 }
 
 .wp-pagenavi .previouspostslink {
@@ -38,6 +38,6 @@
 
 .wp-pagenavi .previouspostslink:hover .pagination__prev,
 .wp-pagenavi .nextpostslink:hover .pagination__next {
-	border-right: 1px solid #fff;
-	border-top: 1px solid #fff;
+	border-right: 1px solid $white;
+	border-top: 1px solid $white;
 }

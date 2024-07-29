@@ -18,6 +18,11 @@
 }
 
 .faq__container {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 }
 
 .faq__list {

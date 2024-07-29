@@ -8,8 +8,8 @@
   <!-- メインビュー -->
   <div class="mv">
     <picture>
-      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page-blog-fv.jpg")); ?>" media="(max-width: 767px)">
-      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page-blog-fv-sp.jpg")); ?>" alt="ブログのメイン画像">
+      <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/page_blog-pc.webp")); ?>" media="(max-width: 767px)">
+      <img class="mv__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/page_blog-sp.webp")); ?>" alt="">
     </picture>
     <h1 class="mv__text"><?php the_archive_title(); ?></h1>
   </div>
@@ -18,7 +18,7 @@
   <?php get_template_part('parts/breadcrumb'); ?>
 
   <div class="blog-layout sub-top-main sub-top-main--wide">
-    <div class="blog-layout__inner inner back-icon">
+    <div class="blog-layout__inner inner ">
       <div class="blog-layout__container">
         <div class="blog-layout__main-contents">
           <!-- ブログカード一覧 -->

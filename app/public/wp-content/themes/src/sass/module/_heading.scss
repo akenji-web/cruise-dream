@@ -12,10 +12,11 @@
 .heading__title {
   color: $black;
   font-size: rem(32);
-  font-family: "Barlow+Semi+Condensed";
+  font-family: "Barlow Semi Condensed";
   font-style: normal;
   font-weight: $normal;
   line-height: 1.250; /* 125% */
+  text-transform: capitalize;
 
   @include mq("md") {
     font-size: rem(56);
@@ -23,8 +24,7 @@
   }
 }
 
-.heading__title::first-letter {
-  color: $blue;
+.heading__title.heading__title--upper {
   text-transform: uppercase;
 }
 
@@ -43,21 +43,11 @@
 }
 
 .heading__title.heading__title--reverse {
-  @include mq("md") {
-    color: $white;
-  }
+  color: $white;
 }
 
-.heading__title.heading__title--reverse::first-letter {
-  @include mq("md") {
-    color: $lightblue;
-  }
-}
-
-.heading__subtitle.heading__subtitle--reverse{
-  @include mq("md") {
-    color: $white;
-  }
+.heading__subtitle.heading__subtitle--reverse {
+  color: $white;
 }
 
 .heading__title.heading__title--large {

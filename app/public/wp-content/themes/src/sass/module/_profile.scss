@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.profile {
+}
+
+.profile__inner {
+  max-width: rem(600);
+}
+
+.profile__heading {
+
+}
+
+.profile__container {
+  margin-top: rem(64);
+
+  @include mq("md"){
+    margin-top: rem(56);
+    padding-right: rem(60);
+    padding-left: rem(60);
+  }
+}
+
+.profile__image {
+  width: 100%;
+  aspect-ratio: 343 / 200;
+  object-fit: cover;
+  height: auto;
+
+  @include mq("md"){
+    max-width: rem(1080);
+    aspect-ratio: 1080 / 540;
+  }
+}
+
+.profile__list {
+  margin-top: rem(40);
+  border-bottom: 1px solid $darkblue;
+
+  @include mq("md"){
+    display: grid;
+    grid-template-columns: rem(416) auto;
+    margin-top: rem(60);
+  }
+}
+
+.profile__item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: rem(36);
+  border-top: 1px solid $darkblue;
+  padding: rem(28) 0 rem(26) rem(14);
+
+  @include mq("md"){
+    padding: rem(24) 0 rem(24) rem(14);
+  }
+}
+
+.profile__title {
+  width: 100%;
+  max-width: rem(80);
+  color: $darkblue;
+  font-size: rem(14);
+  line-height: normal;
+  letter-spacing: .1em;
+
+  @include mq("md"){
+    font-size: rem(18);
+  }
+}
+
+.profile__content {
+  color: $black;
+  font-size: rem(12);
+  font-weight: $regular;
+  line-height: normal;
+  letter-spacing: .1em;
+
+  @include mq("md"){
+    font-size: rem(16);
+  }
+}
+
+

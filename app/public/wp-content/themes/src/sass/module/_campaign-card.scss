@@ -6,18 +6,40 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-}
+  border-radius: rem(5);
+  width: 100%;
 
-.campaign-card__image {
-  aspect-ratio: 280 / 188;
-  object-fit: cover;
-
-  @include mq("md") {
-    aspect-ratio: 333 / 223;
+  @include mq("md"){
+    max-width: rem(332);
   }
 }
 
-.campaign-card__image.campaign-card__image--small {
+.campaign-card__image {
+  overflow: hidden;
+  border-radius: rem(5) rem(5) 0 0;
+}
+
+.campaign-card__image img {
+  width: 100%;
+  aspect-ratio: 280 / 188;
+  object-fit: cover;
+  height: auto;
+  border-radius: rem(5) rem(5) 0 0;
+  transition: transform .3s;
+
+  @include mq("md") {
+    max-width: rem(332);
+    aspect-ratio: 332 / 223;
+  }
+}
+
+.campaign-card:hover .campaign-card__image img {
+  @include mq("md") {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.campaign-card__image.campaign-card__image--small img {
   aspect-ratio: 294 / 188;
 }
 
@@ -34,7 +56,7 @@
 
 .campaign-card__body.campaign-card__body--large {
   @include mq("md") {
-    padding: rem(24) rem(24) rem(40);
+    padding: rem(24) rem(24) rem(36);
   }
 }
 
@@ -105,12 +127,8 @@
   margin-top: rem(8);
   display: flex;
   align-items: flex-end;
-  justify-content: center;
   column-gap: rem(16);
-
-  @include mq("md"){
-    column-gap: rem(25);
-  }
+  justify-content: center;
 }
 
 .campaign-card__before-price {
@@ -142,7 +160,6 @@
 
   @include mq("md") {
     width: rem(91);
-
   }
 }
 
@@ -155,13 +172,13 @@
 .campaign-card__after-price {
   color: $red;
   font-family: Lato;
-  font-size: rem(32);
+  font-size: rem(24);
   font-style: normal;
   font-weight: $bold;
   line-height: 1; /* 100% */
 
   @include mq("md") {
-    font-size: rem(40);
+    font-size: rem(32);
   }
 }
 
@@ -173,17 +190,29 @@
 
 .campaign-card__main-text {
   margin-top: rem(24);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .campaign-card__date {
-  margin-top: rem(32);
+  margin-top: rem(24);
   text-align: center;
   color: $blue;
-  font-family: Lato;
   font-size: rem(16);
   font-style: normal;
   font-weight: $bold;
   line-height: 1.125; /* 112.5% */
+  text-align: center;
+}
+
+.campaign-card__date span {
+  display: block;
+}
+
+.campaign-card__date time {
+  font-family: Lato;
 }
 
 .campaign-card__attention {
