@@ -20,7 +20,9 @@
 }
 
 .button:hover {
-  color: $blue;
+  @include mq("md"){
+    color: $blue;
+  }
 }
 
 .button.button--form {
@@ -34,7 +36,9 @@
 }
 
 .button.button--reverse:hover {
-  color: $white;
+  @include mq("md"){
+    color: $white;
+  }
 }
 
 // スライドアニメーション
@@ -77,7 +81,9 @@
 }
 
 .button:hover .button__input{
-  color: $blue;
+  @include mq("md"){
+    color: $blue;
+  }
 }
 
 // ボタンの矢印
@@ -105,5 +111,7 @@
 }
 
 .button.button--reverse:hover > .button__arrow {
-  background-image: url(../images/arrow-icon.svg);
+  @include mq("md"){
+    background-image: url(../images/arrow-icon.svg);
+  }
 }

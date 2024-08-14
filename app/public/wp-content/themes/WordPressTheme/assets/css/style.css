@@ -714,10 +714,6 @@ a {
 	z-index: 1;
 }
 
-.button:hover {
-	color: #2689d3;
-}
-
 .button.button--form {
 	padding: 0;
 }
@@ -728,10 +724,6 @@ a {
 	color: #2689d3;
 }
 
-.button.button--reverse:hover {
-	color: #fff;
-}
-
 .button__input {
 	color: #fff;
 	font-size: 0.875rem;
@@ -739,10 +731,6 @@ a {
 	font-weight: 400;
 	line-height: 1.571; /* 157.143% */
 	padding: 0.9375rem 6.9375rem 0.9375rem 3.4375rem;
-}
-
-.button:hover .button__input {
-	color: #2689d3;
 }
 
 .button__arrow {
@@ -760,10 +748,6 @@ a {
 
 .button.button--reverse > .button__arrow {
 	background-image: url(../images/arrow--green-icon.svg);
-}
-
-.button.button--reverse:hover > .button__arrow {
-	background-image: url(../images/arrow-icon.svg);
 }
 
 .campaign-card {
@@ -3486,6 +3470,14 @@ html {
 	color: #263045;
 }
 
+.button:hover {
+	color: #2689d3;
+}
+
+.button.button--reverse:hover {
+	color: #fff;
+}
+
 .button::before {
 	background-color: #fff;
 	border-radius: 50vw;
@@ -3509,8 +3501,16 @@ html {
 	transform: scale(1, 1);
 }
 
+.button:hover .button__input {
+	color: #2689d3;
+}
+
 .button:hover .button__arrow {
 	background-image: url(../images/arrow--green-icon.svg);
+}
+
+.button.button--reverse:hover > .button__arrow {
+	background-image: url(../images/arrow-icon.svg);
 }
 
 .campaign-card {
@@ -4490,10 +4490,6 @@ html {
 	grid-template-columns: 1fr 11.25rem;
 	padding: 1.5rem;
 	row-gap: 2.5rem;
-}
-
-.voice-card:hover {
-	opacity: 0.7;
 }
 
 .voice-card__heading {

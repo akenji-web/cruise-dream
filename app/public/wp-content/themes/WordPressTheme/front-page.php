@@ -202,7 +202,7 @@
       <div class="voice__cards voice-cards">
         <?php if ($the_query->have_posts()) : ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <a href="<?php echo esc_url(home_url("/voice")) ?>" class="voice-cards__item voice-card">
+            <div class="voice-cards__item voice-card">
               <div class="voice-card__heading">
                 <p class="voice-card__age"><?php the_field("custom-voice-age"); ?></p>
                 <?php
@@ -225,7 +225,7 @@
               <div class="voice-card__body">
                 <div class="voice-card__text text"><?php the_content(); ?></div>
               </div>
-            </a>
+            </div>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         <?php else : ?>

@@ -59,7 +59,7 @@
       <div class="sub-voice__cards voice-cards">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-            <a href="<?php the_permalink(); ?>" class="voice-cards__item voice-card">
+            <div class="voice-cards__item voice-card">
               <div class="voice-card__heading">
                 <?php if (get_field("custom-voice-age")) : ?>
                 <p class="voice-card__age"><?php the_field("custom-voice-age"); ?></p>
@@ -84,7 +84,7 @@
               <div class="voice-card__body">
                 <div class="voice-card__text text text--green"><?php the_content(); ?></div>
               </div>
-            </a>
+            </div>
           <?php endwhile; ?>
         <?php else : ?>
           <p>記事が投稿されていません</p>
