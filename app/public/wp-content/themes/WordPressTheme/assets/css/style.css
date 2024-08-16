@@ -3754,6 +3754,7 @@ html {
 }
 
 .contact-form__label {
+	gap: 0;
 	justify-content: space-between;
 	max-width: 11.625rem;
 	width: 100%;
