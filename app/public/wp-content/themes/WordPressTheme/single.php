@@ -46,13 +46,17 @@
           <div class="pagination top-pagination pagination--no-number">
           <?php
             // 前の記事へのリンク
-            $prev_link = get_previous_post_link('<div class="pagination__item">%link</div>', '<span class="pagination__prev"></span>');
+            $prev_link = get_previous_post_link('<div class="pagination__text">%link</div>', '前のページ');
             if (!empty($prev_link)) {
                 echo $prev_link;
             }
-
+          ?>
+          <div>
+            <a href="<?php echo esc_url(home_url("/blog")) ?>" class="pagination__text">ブログ一覧へ<span class="button__arrow"></span></a>
+          </div>
+          <?php
             // 次の記事へのリンク
-            $next_link = get_next_post_link('<div class="pagination__item">%link</div>', '<span class="pagination__next"></span>');
+            $next_link = get_next_post_link('<div class="pagination__text">%link</div>', '次のページ');
             if (!empty($next_link)) {
                 echo $next_link;
             }

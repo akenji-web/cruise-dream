@@ -192,7 +192,7 @@ jQuery(function ($) {
     $(window).on("scroll", function () {
       var scrollHeight = $(document).height();
       var scrollPosition = $(window).height() + $(window).scrollTop();
-      var footHeight = $("footer").innerHeight();
+      var footHeight = $("footer").innerHeight() + $(".contact").innerHeight() + 10;
       if (scrollHeight - scrollPosition <= footHeight) {
         // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
         returnTop.css({

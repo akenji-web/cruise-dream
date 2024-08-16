@@ -19,6 +19,9 @@
 }
 
 .footer__logo {
+  aspect-ratio: 213 / 52;
+  object-fit: cover;
+  object-position: center;
   width: 100%;
   max-width: rem(128);
 
@@ -70,7 +73,7 @@
   margin-top: rem(31);
   text-align: center;
   color: $white;
-  font-family: Gotu;
+  font-family: "Barlow Semi Condensed";
   font-size: rem(14);
   font-style: normal;
   font-weight: $normal;

@@ -175,7 +175,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(window).on("scroll", function () {
       const scrollHeight = $(document).height();
       const scrollPosition = $(window).height() + $(window).scrollTop();
-      const footHeight = $("footer").innerHeight();
+      const footHeight = $("footer").innerHeight() + $(".contact").innerHeight() + 10;
       if (scrollHeight - scrollPosition <= footHeight) {
         // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
         returnTop.css({

@@ -2,15 +2,13 @@
 <?php
   if (is_front_page()) {
     $layout_top_contact_sub = '';
-    $contact_sub_width = '';
   } else {
     $layout_top_contact_sub = 'top-contact--sub';
-    $contact_sub_width = 'contact__container--sub';
   }
 ?>
 <section id="contact" class="contact top-contact <?php echo $layout_top_contact_sub; ?>">
-  <div class="contact__inner inner">
-    <a href="<?php echo esc_url(home_url("/contact")) ?>" class="contact__container <?php echo $contact_sub_width; ?>">
+  <div class="contact__inner">
+    <a href="<?php echo esc_url(home_url("/contact")) ?>" class="contact__container">
       <div class="contact__heading heading">
         <h2 class="heading__title heading__title--large heading__title--reverse">contact</h2>
         <p class="heading__subtitle heading__subtitle--tight heading__subtitle--reverse">お問い合わせ</p>
@@ -25,7 +23,7 @@
 <?php endif ?>
 
 <?php
-  if (is_404()) {
+  if (!is_page('contact') && !is_page('thanks')) {
     $layout_top_footer = '';
   } else {
     $layout_top_footer = 'top-footer';
@@ -37,13 +35,13 @@
   </a>
   <div class="footer__inner inner">
     <div class="footer__heading">
-      <img class="footer__logo" src="<?php echo esc_url(get_theme_file_uri("/assets/images/logo_white.webp")); ?>" alt="会社のロゴ">
+      <img class="footer__logo" src="<?php echo esc_url(get_theme_file_uri("/assets/images/cruise_dream_logo_wh.webp")); ?>" alt="cruise dream">
       <div class="footer__sns-icon">
         <a href="https://www.facebook.com/" class="footer__facebook" target="_blank">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/facebooklogo.png")); ?>" alt="facebookのロゴ">
+          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/facebooklogo.png")); ?>" alt="facebookページへ遷移">
         </a>
         <a href="https://www.instagram.com/" class="footer__instagram" target="_blank">
-          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/instagramlogo.png")); ?>" alt="instagramのロゴ">
+          <img src="<?php echo esc_url(get_theme_file_uri("/assets/images/instagramlogo.png")); ?>" alt="instagramページへ遷移">
         </a>
       </div>
     </div>

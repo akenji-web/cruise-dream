@@ -17,12 +17,12 @@
     <div class="profile__inner inner">
       <div class="profile__heading heading">
         <h2 class="heading__title">company profile</h2>
-        <p class="heading__sub-title">会社概要</p>
+        <p class="heading__subtitle">会社概要</p>
       </div>
       <div class="profile__container">
         <picture>
           <source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/about_profile-pc.webp")); ?>" media="(min-width: 768px)" />
-          <img class="profile__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/about_profile-sp.webp")); ?>" alt="青空の下会社のビルが建っている様子" loading="lazy" decoding="async">
+          <img class="profile__image" src="<?php echo esc_url(get_theme_file_uri("/assets/images/about_profile-sp.webp")); ?>" alt="青空の下の会社のビル" loading="lazy" decoding="async">
         </picture>
         <dl class="profile__list">
           <div class="profile__item">

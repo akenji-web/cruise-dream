@@ -24,6 +24,7 @@
 .gallery__items {
   display: grid;
   gap: rem(8);
+  grid-template-columns: repeat(8, 1fr);
 
   @include mq("md"){
     grid-template-columns: repeat(9, 1fr);
@@ -34,6 +35,8 @@
 .gallery__item {
   cursor: pointer;
   transition: opacity .3s;
+  grid-column: span 4;
+  grid-row: span 1;
 
   @include mq("md"){
     grid-column: span 5;
@@ -42,11 +45,16 @@
 }
 
 .gallery__item:hover {
-  opacity: .7;
+  @include mq("md"){
+    opacity: .7;
+  }
 }
 
 .gallery__item:nth-of-type(6n+1),
 .gallery__item:nth-of-type(6n+6) {
+  grid-column: span 4;
+  grid-row: span 1;
+
   @include mq("md"){
     grid-column: span 4;
     grid-row: span 2;
@@ -66,5 +74,7 @@
 
 .gallery__item:nth-of-type(6n+1) img,
 .gallery__item:nth-of-type(6n+6) img {
-  aspect-ratio: 492 / 746;
+  @include mq("md"){
+    aspect-ratio: 492 / 746;
+  }
 }

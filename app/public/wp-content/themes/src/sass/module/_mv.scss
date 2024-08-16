@@ -22,10 +22,11 @@
   text-align: center;
   transform: translateY(-50%);
   color: $white;
-  font-family: Lato;
+  font-family: "Barlow Semi Condensed";
   font-size: rem(40);
   font-style: normal;
   font-weight: $normal;
+  text-shadow: 5px 5px 2px $darkblue;
   line-height: normal;
 
   @include mq("md") {

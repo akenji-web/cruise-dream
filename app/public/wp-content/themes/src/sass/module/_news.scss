@@ -5,6 +5,7 @@
   padding-top: rem(48);
   padding-bottom: rem(120);
   background-color: $lightblue;
+  overflow: hidden;
   
   @include mq("md"){
     padding-bottom: rem(52);
@@ -36,8 +37,9 @@
   @include mq("md"){
     top: rem(80);
     bottom: auto;
-    left: auto;
-    right: calc(50% - min(43vw, rem(540)));
+    right: auto;
+    left: calc(50% - min(43vw, rem(540)));
+    z-index: 3;
   }
 }
 
@@ -49,7 +51,9 @@
 
   @include mq("md"){
     margin-top: rem(40);
-    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: rem(800);
+    margin-inline: auto;
     border-top: none;
     border-left: 1px solid $black;
   }
@@ -69,21 +73,27 @@
 }
 
 .news__article:hover {
-  opacity: 0.7;
+  @include mq("md"){
+    opacity: 0.7;
+  }
 }
 
 .news__datetime {
   color: $black;
-  font-size: rem(14);
+  font-size: rem(12);
   font-weight: $bold;
   line-height: calc(22 / 14);
   letter-spacing: .1em;
+
+  @include mq("md"){
+    font-size: rem(14);
+  }
 }
 
 .news__title {
   margin-top: rem(9);
   color: $black;
-  font-size: rem(18);
+  font-size: rem(14);
   font-weight: $bold;
   line-height: calc(27 / 18);
   letter-spacing: .1em;
@@ -91,6 +101,10 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+
+  @include mq("md"){
+    font-size: rem(18);
+  }
 }
 
 .news__category {

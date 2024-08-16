@@ -93,7 +93,7 @@
   <!-- ニュース -->
   <section id="news" class="news">
     <div class="news__inner inner">
-      <div class="news__heading heading">
+      <div class="news__heading heading heading--right">
         <h2 class="heading__title">news</h2>
         <p class="heading__subtitle">ニュース</p>
       </div>
@@ -103,7 +103,7 @@
       <?php
         $args = [
           "post_type" => "news",
-          "posts_per_page" => 3,
+          "posts_per_page" => 1,
         ];
         $the_query = new WP_Query($args);
       ?>
@@ -188,7 +188,7 @@
   <!-- お客様の声 -->
   <section id="voice" class="voice">
     <div class="voice__inner inner">
-      <div class="voice__heading heading">
+      <div class="voice__heading heading heading--right">
         <h2 class="heading__title">voice</h2>
         <p class="heading__subtitle">お客様の声</p>
       </div>
@@ -239,9 +239,9 @@
   </section>
 
   <!-- よくある質問コンテンツ -->
-  <section class="faq sub-top-main">
-    <div class="faq__inner">
-      <div class="faq__heading heading">
+  <section class="faq">
+    <div class="faq__inner inner">
+      <div class="faq__heading heading  heading--left">
         <h2 class="heading__title heading__title--upper">faq</h2>
         <p class="heading__subtitle">よくある質問</p>
       </div>
